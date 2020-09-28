@@ -1,9 +1,9 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model } from "mongoose";
 
 const schemaPersona = new Schema({
-    nombre: String,
-    apellido: String,
-    edad: Number,
+  nombre: String,
+  apellido: String,
+  edad: Number,
 });
 
-export let personaSchema = model('schemaPersona', schemaPersona, 'personas');
+export let personaSchema = model("schemaPersona", schemaPersona, "personas");

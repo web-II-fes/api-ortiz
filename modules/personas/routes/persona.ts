@@ -1,14 +1,25 @@
 import * as express from "express";
 import { personaSchema } from "./../schemas/persona";
+import { getMayores, getMenores } from "./../controllers/personaCtrl";
 
 const router = express.Router();
 
 //Callbacks
 router.get("/persona", (req, res, next) => {
-  console.log("Entra a personas");
+  /*   let personas = personaSchema.find(async (err, persona) => {
+    if (err) return;
+    try {
+      let menores = await getMenores(personas);
+      res.send(menores);
+    } catch (err) {
+      throw err;
+    }
+  }); */
+
+  console.log("Entra a poersonas");
   personaSchema.find((err, persona) => {
     if (err) return;
-    console.log("Viene persona GET: ", persona);
+    console.log("Pepe: ", persona);
     res.send(persona);
   });
 });
