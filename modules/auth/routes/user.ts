@@ -24,9 +24,8 @@ router.post("/login", /* verifyToken, */ async (req, res) => {
       token: token,
     });
   } catch (err) {
-    res.send({
-      error: err,
-    });
+       err
+       console.log("Usuario no registrado");
   }
 });
 
