@@ -16,7 +16,7 @@ router.get("/persona", (req, res, next) => {
     }
   }); */
 
-  console.log("Entra a poersonas");
+  console.log("Entra a personas");
   personaSchema.find((err, persona) => {
     if (err) return;
     console.log("Pepe: ", persona);

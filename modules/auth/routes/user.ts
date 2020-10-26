@@ -14,7 +14,7 @@ router.post("/registro", async (req, res) => {
   }
 });
 
-router.post("/login", verifyToken, async (req, res) => {
+router.post("/login", /* verifyToken, */ async (req, res) => {
   console.log("Entra login");
   try {
     let token = await login(req.body);
